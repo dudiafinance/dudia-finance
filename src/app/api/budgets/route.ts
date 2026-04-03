@@ -1,6 +1,6 @@
 import { db } from "@/lib/db";
-import { budgets, categories, transactions } from "@/lib/db/schema";
-import { eq, and, sum } from "drizzle-orm";
+import { budgets } from "@/lib/db/schema";
+import { eq, and } from "drizzle-orm";
 import { auth } from "@/lib/auth/config";
 
 export async function GET(request: Request) {

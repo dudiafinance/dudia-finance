@@ -1,7 +1,10 @@
 import { pgTable, uuid, text, timestamp, numeric, boolean, integer, pgEnum, uniqueIndex, index } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
-import { users } from "../auth/schema";
+import { users, accounts, sessions, verificationTokens } from "../auth/schema";
+
+// Re-export auth schemas for Drizzle migrations
+export { users, accounts, sessions, verificationTokens };
 
 // Enums
 export const transactionTypeEnum = pgEnum("transaction_type", ["income", "expense"]);

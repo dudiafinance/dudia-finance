@@ -1,3 +1,28 @@
+import { Suspense } from 'react';
+import {
+  DashboardCards,
+  MonthlyChart,
+  CategoryChart,
+  RecentTransactions,
+} from '@/components/dashboard';
+
+function DashboardLoading() {
+  return (
+    <div className="space-y-6">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} className="h-32 bg-muted animate-pulse rounded-lg" />
+        ))}
+      </div>
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className="h-96 bg-muted animate-pulse rounded-lg" />
+        <div className="h-96 bg-muted animate-pulse rounded-lg" />
+      </div>
+      <div className="h-96 bg-muted animate-pulse rounded-lg" />
+    </div>
+  );
+}
+
 export default function DashboardPage() {
   return (
     <div className="space-y-6">
@@ -7,28 +32,23 @@ export default function DashboardPage() {
           Bem-vindo ao DUD.IA Finance
         </p>
       </div>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-lg border bg-card p-6">
-          <h3 className="text-sm font-medium text-muted-foreground">Saldo</h3>
-          <p className="text-2xl font-bold">R$ 0,00</p>
-        </div>
-        <div className="rounded-lg border bg-card p-6">
-          <h3 className="text-sm font-medium text-muted-foreground">Receitas</h3>
-          <p className="text-2xl font-bold text-green-600">R$ 0,00</p>
-        </div>
-        <div className="rounded-lg border bg-card p-6">
-          <h3 className="text-sm font-medium text-muted-foreground">Despesas</h3>
-          <p className="text-2xl font-bold text-red-600">R$ 0,00</p>
-        </div>
-        <div className="rounded-lg border bg-card p-6">
-          <h3 className="text-sm font-medium text-muted-foreground">Economia</h3>
-          <p className="text-2xl font-bold text-blue-600">R$ 0,00</p>
-        </div>
+
+      <Suspense fallback={<DashboardLoading />}>
+        <DashboardCards />
+      </Suspense>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        <Suspense fallback={<div className="h-96 bg-muted animate-pulse rounded-lg" />}>
+          <MonthlyChart />
+        </Suspense>
+        <Suspense fallback={<div className="h-96 bg-muted animate-pulse rounded-lg" />}>
+          <CategoryChart />
+        </Suspense>
       </div>
-      <div className="rounded-lg border bg-card p-6">
-        <h3 className="text-lg font-semibold">Transações Recentes</h3>
-        <p className="text-muted-foreground">Nenhuma transação ainda...</p>
-      </div>
+
+      <Suspense fallback={<div className="h-96 bg-muted animate-pulse rounded-lg" />}>
+        <RecentTransactions />
+      </Suspense>
     </div>
   );
 }

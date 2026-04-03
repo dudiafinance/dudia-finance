@@ -16,10 +16,10 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## CHECKPOINT ATUAL
 
-**Fase:** FASE 1 — Projeto Inicializado ✅
-**Etapa:** FASE 2 — Autenticação e API Routes
-**Status:** EM ANDAMENTO
-**Último passo concluído:** Schema, migrations, autenticação e API routes básicas criadas
+**Fase:** FASE 3 — Autenticação Completa ✅
+**Próxima Etapa:** FASE 4 — Dashboard e Layout
+**Status:** CONCLUÍDO - OAuth configurado
+**Último passo concluído:** GitHub OAuth, Google OAuth e credenciais de email configurados
 
 ---
 
@@ -286,13 +286,15 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## PRÓXIMA AÇÃO
 
-**Ação:** Implementar páginas de autenticação
+**Ação:** Testar autenticação e começar Dashboard
 **Passos:**
-1. Criar página de login com provedores OAuth
-2. Criar página de registro
-3. Testar fluxo de autenticação
-4. Implementar proteção de rotas
-**Após concluir:** Ir para Fase 4 (Dashboard)
+1. Testar login local: `npm run dev` → http://localhost:3000/login
+2. Testar registro de usuário
+3. Testar login com GitHub OAuth
+4. Testar login com Google OAuth
+5. Fazer commit das alterações
+6. Deploy no Vercel e testar produção
+**Após concluir:** Ir para Fase 4 (Dashboard) do PLANO.md
 
 ---
 
@@ -307,6 +309,13 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 | 03/04/2026 | Verificar GitHub CLI | CONCLUÍDO - v2.89.0 instalado |
 | 03/04/2026 | Autenticar GitHub CLI | CONCLUÍDO - autenticado via browser |
 | 03/04/2026 | Reiniciar PC | CONCLUÍDO |
+| 03/04/2026 | Implementar autenticação | CONCLUÍDO - Login, registro e OAuth |
+| 03/04/2026 | Schema auth atualizado | CONCLUÍDO - Campo password adicionado |
+| 03/04/2026 | Build verificado | CONCLUÍDO - Sem erros |
+| 03/04/2026 | Criar GitHub OAuth (DEV) | CONCLUÍDO - Client ID/Secret configurados |
+| 03/04/2026 | Criar GitHub OAuth (PROD) | CONCLUÍDO - Client ID/Secret configurados |
+| 03/04/2026 | Criar Google OAuth | CONCLUÍDO - Client ID/Secret configurados |
+| 03/04/2026 | Configurar Vercel env vars | CONCLUÍDO - Todas as credenciais OAuth |
 
 ---
 

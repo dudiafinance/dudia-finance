@@ -1,5 +1,5 @@
 import { db } from "@/lib/db";
-import { transactions, categories } from "@/lib/db/schema";
+import { transactions } from "@/lib/db/schema";
 import { desc, eq, and, gte, lte } from "drizzle-orm";
 import { auth } from "@/lib/auth/config";
 

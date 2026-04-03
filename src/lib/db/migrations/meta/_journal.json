@@ -8,6 +8,13 @@
       "when": 1775241523002,
       "tag": "0000_noisy_reptil",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1775243055644,
+      "tag": "0001_funny_fenris",
+      "breakpoints": true
     }
   ]
 }
