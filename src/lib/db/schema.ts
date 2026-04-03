@@ -1,52 +1,10 @@
 import { pgTable, uuid, text, timestamp, numeric, boolean, integer, pgEnum, uniqueIndex, index } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
+import { users } from "../auth/schema";
 
 // Enums
 export const transactionTypeEnum = pgEnum("transaction_type", ["income", "expense"]);
-
-// Users
-export const users = pgTable("users", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  email: text("email").notNull().unique(),
-  name: text("name").notNull(),
-  currency: text("currency").default("BRL"),
-  locale: text("locale").default("pt-BR"),
-  timezone: text("timezone").default("America/Sao_Paulo"),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at").defaultNow().notNull(),
-});
-
-// Accounts (NextAuth)
-export const accounts = pgTable("accounts", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }).notNull(),
-  type: text("type").notNull(),
-  provider: text("provider").notNull(),
-  providerAccountId: text("provider_account_id").notNull(),
-  refreshToken: text("refresh_token"),
-  accessToken: text("access_token"),
-  expiresAt: timestamp("expires_at"),
-  tokenType: text("token_type"),
-  scope: text("scope"),
-  idToken: text("id_token"),
-  sessionState: text("session_state"),
-});
-
-// Sessions (NextAuth)
-export const sessions = pgTable("sessions", {
-  id: uuid("id").defaultRandom().primaryKey(),
-  sessionToken: text("session_token").notNull().unique(),
-  userId: uuid("user_id").references(() => users.id, { onDelete: "cascade" }).notNull(),
-  expires: timestamp("expires").notNull(),
-});
-
-// Verification Tokens (NextAuth)
-export const verificationTokens = pgTable("verification_tokens", {
-  identifier: text("identifier").notNull(),
-  token: text("token").notNull().unique(),
-  expires: timestamp("expires").notNull(),
-});
 
 // Categories
 export const categories = pgTable("categories", {
@@ -216,5 +174,3 @@ export type Category = typeof categories.$inferSelect;
 export type NewCategory = typeof categories.$inferInsert;
 export type Budget = typeof budgets.$inferSelect;
 export type NewBudget = typeof budgets.$inferInsert;
-export type User = typeof users.$inferSelect;
-export type NewUser = typeof users.$inferInsert;

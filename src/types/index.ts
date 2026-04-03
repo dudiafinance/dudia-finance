@@ -2,7 +2,6 @@
 export type { Transaction, NewTransaction } from "@/lib/db/schema";
 export type { Category, NewCategory } from "@/lib/db/schema";
 export type { Budget, NewBudget } from "@/lib/db/schema";
-export type { User, NewUser } from "@/lib/db/schema";
 
 // API Response types
 export interface ApiResponse<T> {
