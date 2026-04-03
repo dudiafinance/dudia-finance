@@ -16,10 +16,10 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## CHECKPOINT ATUAL
 
-**Fase:** ETAPA 2 — Criação de Contas
-**Etapa:** 2.1 GitHub
+**Fase:** ETAPA 8 — Variáveis no Vercel
+**Etapa:** 8.1 Criar Projeto no Vercel
 **Status:** EM ANDAMENTO
-**Último passo concluído:** GitHub CLI instalado e autenticado (v2.89.0)
+**Último passo concluído:** Secrets adicionados ao GitHub
 
 ---
 
@@ -89,91 +89,101 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 ## ETAPA 2: CRIAÇÃO DE CONTAS
 
 ### 2.1 GitHub — github.com
-- [ ] Criar conta
-- [ ] Criar repositório: `dudia-finance` (público)
-- [ ] Branch padrão: `main`
-- [ ] Criar branch `develop`
+- [x] Criar conta
+- [x] Criar repositório: `dudia-finance` (público)
+- [x] Branch padrão: `main`
+- [x] Criar branch `develop`
 
-**Status:** PENDENTE
-**Data conclusão:** ___/___/_____
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+**URL:** https://github.com/dudiafinance/dudia-finance
 
 ---
 
 ### 2.2 OpenRouter — openrouter.ai
-- [ ] Criar conta
-- [ ] Criar API Key: nome `dudia-finance-dev`
-- [ ] Copiar chave (sk-or-v1-xxxx)
-- [ ] Definir limite $0/mês
+- [x] Criar conta
+- [x] Criar API Key: nome `dudia-finance-dev`
+- [x] Copiar chave (sk-or-v1-xxxx)
+- [x] Definir limite $0/mês
 
-**Status:** PENDENTE
-**Chave API salva em:** NÃO
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+**Chave API salva em:** SIM (opencode.json global)
 
 ---
 
 ### 2.3 Vercel — vercel.com
-- [ ] Criar conta com SSO do GitHub
-- [ ] Anotar Project ID
-- [ ] Anotar Org/Team ID
-- [ ] Criar token: `github-actions`
+- [x] Criar conta com SSO do GitHub
+- [x] Anotar Team ID
+- [ ] Anotar Project ID (pendente projeto)
+- [x] Criar token: `github-actions`
 
-**Status:** PENDENTE
-**Token salvo em:** NÃO
+**Status:** CONCLUÍDO (Project ID pendente)
+**Data conclusão:** 03/04/2026
+**Team ID:** team_dgXPZDF3ErPgn0IcPPzIb0RN
+**Token salvo em:** SIM
 
 ---
 
 ### 2.4 Neon — neon.tech
-- [ ] Criar conta com SSO do GitHub
-- [ ] Criar projeto: `dudia-finance`
-- [ ] Copiar DATABASE_URL (pooled)
-- [ ] Copiar DIRECT_DATABASE_URL (direct)
+- [x] Criar conta com SSO do GitHub
+- [x] Criar projeto: `dudia-finance`
+- [x] Copiar DATABASE_URL (pooled)
+- [x] Copiar DIRECT_DATABASE_URL (direct)
 - [ ] Criar branch `main` (produção)
 - [ ] Criar branch `dev` (desenvolvimento)
 
-**Status:** PENDENTE
-**Connection strings salvas em:** NÃO
+**Status:** CONCLUÍDO (branches pendentes)
+**Data conclusão:** 03/04/2026
+**Project ID:** sparkling-mouse-47533270
+**Connection strings salvas em:** SIM
 
 ---
 
 ### 2.5 Resend — resend.com
-- [ ] Criar conta
-- [ ] Adicionar domínio OU usar onboarding@resend.dev
-- [ ] Criar API Key
-- [ ] Copiar RESEND_API_KEY
+- [x] Criar conta
+- [x] Adicionar domínio OU usar onboarding@resend.dev
+- [x] Criar API Key
+- [x] Copiar RESEND_API_KEY
 
-**Status:** PENDENTE
-**Chave API salva em:** NÃO
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+**Chave API salva em:** SIM
 
 ---
 
 ## ETAPA 3: GERAÇÃO DE SECRETS
 
 ### 3.1 NEXTAUTH_SECRET
-- [ ] Gerar com: `openssl rand -base64 32`
-- [ ] Salvar valor
+- [x] Gerar com: `openssl rand -base64 32`
+- [x] Salvar valor
 
-**Status:** PENDENTE
-**Valor salvo em:** NÃO
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+**Valor salvo em:** .env.local
 
 ---
 
 ### 3.2 CRON_SECRET
-- [ ] Gerar com: `openssl rand -hex 32`
-- [ ] Salvar valor
+- [x] Gerar com: `openssl rand -hex 32`
+- [x] Salvar valor
 
-**Status:** PENDENTE
-**Valor salvo em:** NÃO
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+**Valor salvo em:** .env.local
 
 ---
 
 ## ETAPA 4: CONFIGURAÇÃO DO OPENCODE
 
 ### 4.1 Arquivo global
-- [ ] Criar pasta: `C:\Users\Igor Massaro\.config\opencode\`
-- [ ] Criar arquivo: `opencode.json`
-- [ ] Adicionar configuração completa
-- [ ] Adicionar chave do OpenRouter
+- [x] Criar pasta: `C:\Users\Igor Massaro\.config\opencode\`
+- [x] Criar arquivo: `opencode.json`
+- [x] Adicionar configuração completa
+- [x] Adicionar chave do OpenRouter
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
 
 ---
 
@@ -192,25 +202,27 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 ## ETAPA 6: VARIÁVEIS DE AMBIENTE
 
 ### 6.1 Arquivo .env.local
-- [ ] Criar arquivo .env.local
-- [ ] Preencher todas as variáveis
+- [x] Criar arquivo .env.local
+- [x] Preencher todas as variáveis
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
 
 ---
 
 ## ETAPA 7: SECRETS NO GITHUB
 
-- [ ] Adicionar VERCEL_TOKEN
-- [ ] Adicionar VERCEL_ORG_ID
-- [ ] Adicionar VERCEL_PROJECT_ID
-- [ ] Adicionar NEON_DATABASE_URL
-- [ ] Adicionar NEXTAUTH_SECRET
-- [ ] Adicionar CRON_SECRET
-- [ ] Adicionar OPENROUTER_API_KEY
-- [ ] Adicionar RESEND_API_KEY
+- [x] Adicionar VERCEL_TOKEN
+- [x] Adicionar VERCEL_ORG_ID
+- [x] Adicionar VERCEL_PROJECT_ID
+- [x] Adicionar NEON_DATABASE_URL
+- [x] Adicionar NEXTAUTH_SECRET
+- [x] Adicionar CRON_SECRET
+- [x] Adicionar OPENROUTER_API_KEY
+- [x] Adicionar RESEND_API_KEY
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
 
 ---
 
@@ -230,14 +242,14 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## PRÓXIMA AÇÃO
 
-**Ação:** Criar conta e repositório no GitHub
+**Ação:** Criar projeto no Vercel
 **Passos:**
-1. Acessar github.com
-2. Criar conta (se não tiver)
-3. Criar repositório: `dudia-finance` (público)
-4. Branch padrão: `main`
-5. Criar branch `develop`
-**Após concluir:** Avise para continuar para OpenRouter
+1. Entrar em vercel.com
+2. Criar novo projeto importando do GitHub
+3. Selecionar repositório `dudiafinance/dudia-finance`
+4. Anotar o Project ID
+5. Adicionar variáveis de ambiente no Vercel
+**Após concluir:** Avise para finalizarmos a configuração
 
 ---
 
