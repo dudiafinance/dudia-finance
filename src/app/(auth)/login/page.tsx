@@ -17,19 +17,14 @@ export default function LoginPage() {
     setError("");
     
     try {
-      const result = await signIn("credentials", {
+      await signIn("credentials", {
         email,
         password,
         redirect: true,
         callbackUrl: "/",
       });
-      
-      if (result?.error) {
-        setError("Email ou senha inválidos");
-      }
     } catch (err) {
-      setError("Erro ao fazer login");
-    } finally {
+      setError("Email ou senha inválidos");
       setIsLoading(false);
     }
   };
