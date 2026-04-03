@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configurações experimentais serão adicionadas quando necessário
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
 };
 
 export default nextConfig;
