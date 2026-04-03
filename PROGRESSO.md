@@ -16,10 +16,10 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## CHECKPOINT ATUAL
 
-**Fase:** ETAPA 8 — Variáveis no Vercel
-**Etapa:** 8.1 Criar Projeto no Vercel
+**Fase:** ETAPA 5 — Configuração do Projeto
+**Etapa:** 5.1 Inicialização do Projeto Next.js
 **Status:** EM ANDAMENTO
-**Último passo concluído:** Secrets adicionados ao GitHub
+**Último passo concluído:** Vercel configurado, variáveis de ambiente adicionadas
 
 ---
 
@@ -115,12 +115,14 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 ### 2.3 Vercel — vercel.com
 - [x] Criar conta com SSO do GitHub
 - [x] Anotar Team ID
-- [ ] Anotar Project ID (pendente projeto)
+- [x] Anotar Project ID
 - [x] Criar token: `github-actions`
+- [x] Criar projeto via CLI
 
-**Status:** CONCLUÍDO (Project ID pendente)
+**Status:** CONCLUÍDO
 **Data conclusão:** 03/04/2026
 **Team ID:** team_dgXPZDF3ErPgn0IcPPzIb0RN
+**Project ID:** prj_AOSgtBbxcJeTENoSXvQjV14xEstH
 **Token salvo em:** SIM
 
 ---
@@ -187,15 +189,27 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ---
 
+### 4.2 Arquivo local do projeto
+- [x] Criar arquivo `.env.local` na raiz
+- [x] Preencher todas as variáveis de ambiente
+
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+
+---
+
 ## ETAPA 5: CONFIGURAÇÃO DO PROJETO
 
 ### 5.1 Repositório GitHub
-- [ ] Clonar/criar repositório `dudia-finance`
-- [ ] Criar arquivo `opencode.json` na raiz
-- [ ] Criar estrutura `.opencode/agents/`
-- [ ] Criar estrutura `.opencode/skills/`
+- [x] Clonar/criar repositório `dudia-finance`
+- [x] Criar arquivo `opencode.json` na raiz
+- [x] Criar estrutura `.opencode/agents/`
+- [x] Criar estrutura `.opencode/skills/`
+- [x] Conectar ao Vercel
+- [x] Adicionar variáveis de ambiente
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
 
 ---
 
@@ -216,6 +230,7 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 - [x] Adicionar VERCEL_ORG_ID
 - [x] Adicionar VERCEL_PROJECT_ID
 - [x] Adicionar NEON_DATABASE_URL
+- [x] Adicionar NEON_DATABASE_URL
 - [x] Adicionar NEXTAUTH_SECRET
 - [x] Adicionar CRON_SECRET
 - [x] Adicionar OPENROUTER_API_KEY
@@ -228,28 +243,30 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## ETAPA 8: VARIÁVEIS NO VERCEL
 
-- [ ] Adicionar DATABASE_URL
-- [ ] Adicionar DIRECT_DATABASE_URL
-- [ ] Adicionar NEXTAUTH_SECRET
-- [ ] Adicionar NEXTAUTH_URL
-- [ ] Adicionar OPENROUTER_API_KEY
-- [ ] Adicionar RESEND_API_KEY
-- [ ] Adicionar CRON_SECRET
+- [x] Adicionar DATABASE_URL
+- [x] Adicionar DIRECT_DATABASE_URL
+- [x] Adicionar NEXTAUTH_SECRET
+- [x] Adicionar NEXTAUTH_URL
+- [x] Adicionar OPENROUTER_API_KEY
+- [x] Adicionar RESEND_API_KEY
+- [x] Adicionar CRON_SECRET
 
-**Status:** PENDENTE
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+**Project ID:** prj_AOSgtBbxcJeTENoSXvQjV14xEstH
 
 ---
 
 ## PRÓXIMA AÇÃO
 
-**Ação:** Criar projeto no Vercel
+**Ação:** Inicializar projeto Next.js
 **Passos:**
-1. Entrar em vercel.com
-2. Criar novo projeto importando do GitHub
-3. Selecionar repositório `dudiafinance/dudia-finance`
-4. Anotar o Project ID
-5. Adicionar variáveis de ambiente no Vercel
-**Após concluir:** Avise para finalizarmos a configuração
+1. Instalar dependências do projeto base
+2. Configurar estrutura de pastas
+3. Configurar Prisma
+4. Configurar Tailwind CSS
+5. Configurar NextAuth.js
+**Após concluir:** Testar projeto localmente
 
 ---
 
