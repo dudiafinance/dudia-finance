@@ -17,9 +17,9 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 ## CHECKPOINT ATUAL
 
 **Fase:** ETAPA 5 — Configuração do Projeto
-**Etapa:** 5.1 Inicialização do Projeto Next.js
-**Status:** EM ANDAMENTO
-**Último passo concluído:** Vercel configurado, variáveis de ambiente adicionadas
+**Etapa:** Neon Branches
+**Status:** PENDENTE
+**Último passo concluído:** Agentes e Skills criados
 
 ---
 
@@ -213,6 +213,33 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ---
 
+### 5.2 Agentes OpenCode
+- [x] Criar pasta `.opencode/agents/`
+- [x] arquiteto/AGENT.md
+- [x] backend/AGENT.md
+- [x] frontend/AGENT.md
+- [x] banco-de-dados/AGENT.md
+- [x] ia-financeira/AGENT.md
+- [x] devops/AGENT.md
+
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+
+---
+
+### 5.3 Skills OpenCode
+- [x] Criar pasta `.opencode/skills/`
+- [x] criar-api-route/SKILL.md
+- [x] criar-componente/SKILL.md
+- [x] criar-schema/SKILL.md
+- [x] criar-agente-ia/SKILL.md
+- [x] deploy/SKILL.md
+
+**Status:** CONCLUÍDO
+**Data conclusão:** 03/04/2026
+
+---
+
 ## ETAPA 6: VARIÁVEIS DE AMBIENTE
 
 ### 6.1 Arquivo .env.local
@@ -259,14 +286,14 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## PRÓXIMA AÇÃO
 
-**Ação:** Inicializar projeto Next.js
+**Ação:** Criar branches no Neon (PostgreSQL)
 **Passos:**
-1. Instalar dependências do projeto base
-2. Configurar estrutura de pastas
-3. Configurar Prisma
-4. Configurar Tailwind CSS
-5. Configurar NextAuth.js
-**Após concluir:** Testar projeto localmente
+1. Acessar neon.tech
+2. Abrir projeto dudia-finance
+3. Ir em "Branches"
+4. Criar branch `main` (produção)
+5. Criar branch `dev` (desenvolvimento)
+**Após concluir:** Sistema pronto para desenvolvimento!
 
 ---
 

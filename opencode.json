@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openrouter/deepseek/deepseek-chat-v3-0324:free",
+  "agents": {
+    "arquiteto": {
+      "model": "openrouter/deepseek/deepseek-r1:free",
+      "description": "Orquestrador principal. Analisa pedidos e delega para subagentes especialistas.",
+      "permission": {
+        "task": { "*": "allow" }
+      }
+    },
+    "backend": {
+      "model": "openrouter/deepseek/deepseek-chat-v3-0324:free",
+      "description": "Especialista em Next.js API routes, Drizzle ORM e lógica de negócio."
+    },
+    "frontend": {
+      "model": "openrouter/qwen/qwen3.6-plus:free",
+      "description": "Especialista em React, shadcn/ui, Tailwind CSS e Recharts."
+    },
+    "banco-de-dados": {
+      "model": "openrouter/deepseek/deepseek-r1:free",
+      "description": "Especialista em PostgreSQL, schemas Drizzle e otimização de queries."
+    },
+    "ia-financeira": {
+      "model": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+      "description": "Especialista em Vercel AI SDK, agentes de IA financeira e prompts."
+    },
+    "devops": {
+      "model": "openrouter/deepseek/deepseek-chat-v3-0324:free",
+      "description": "Especialista em GitHub Actions, Vercel deploy e infraestrutura."
+    }
+  },
+  "permissions": {
+    "bash": {
+      "npm install *": "allow",
+      "npx *": "allow",
+      "git *": "allow"
+    },
+    "skill": { "*": "allow" }
+  }
+}
