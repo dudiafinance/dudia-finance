@@ -16,10 +16,10 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## CHECKPOINT ATUAL
 
-**Fase:** FASE 3 — Autenticação Completa ✅
-**Próxima Etapa:** FASE 4 — Dashboard e Layout
-**Status:** CONCLUÍDO - OAuth configurado
-**Último passo concluído:** GitHub OAuth, Google OAuth e credenciais de email configurados
+**Fase:** FASE 3 — Autenticação com Email/Senha ✅
+**Próxima Etapa:** FASE 4 — Dashboard e Transações
+**Status:** CONCLUÍDO - Login e registro funcionando
+**Último passo concluído:** Sistema de autenticação simplificado (email/senha), OAuth removido, dashboard básico criado
 
 ---
 
