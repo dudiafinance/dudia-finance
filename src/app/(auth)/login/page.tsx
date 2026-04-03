@@ -9,21 +9,44 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleCredentialsLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    await signIn("credentials", {
-      email,
-      password,
-      callbackUrl: "/",
-    });
-    setIsLoading(false);
+    setError("");
+    
+    try {
+      const result = await signIn("credentials", {
+        email,
+        password,
+        redirect: true,
+        callbackUrl: "/",
+      });
+      
+      if (result?.error) {
+        setError("Email ou senha inválidos");
+      }
+    } catch (err) {
+      setError("Erro ao fazer login");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleOAuthLogin = async (provider: "github" | "google") => {
     setIsLoading(true);
-    await signIn(provider, { callbackUrl: "/" });
+    setError("");
+    
+    try {
+      await signIn(provider, {
+        redirect: true,
+        callbackUrl: "/",
+      });
+    } catch (err) {
+      setError(`Erro ao entrar com ${provider}`);
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -38,6 +61,12 @@ export default function LoginPage() {
 
         <div className="rounded-lg border bg-card p-8 shadow-sm">
           <div className="space-y-4">
+            {error && (
+              <div className="rounded-md bg-destructive/10 p-3 text-sm text-destructive">
+                {error}
+              </div>
+            )}
+
             <div className="grid gap-2">
               <Button
                 variant="outline"

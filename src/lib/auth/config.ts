@@ -73,5 +73,37 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       }
       return session;
     },
+    async signIn({ user, account }) {
+      // Se for OAuth (GitHub ou Google), criar usuário no banco se não existir
+      if (account?.provider === "github" || account?.provider === "google") {
+        if (!user.email) {
+          return false;
+        }
+
+        try {
+          // Verificar se o usuário já existe
+          const existingUser = await db.query.users.findFirst({
+            where: eq(users.email, user.email),
+          });
+
+          if (!existingUser) {
+            // Criar novo usuário
+            await db.insert(users).values({
+              name: user.name || user.email.split("@")[0],
+              email: user.email,
+              image: user.image,
+              password: null, // OAuth users don't have password
+            });
+          }
+
+          return true;
+        } catch (error) {
+          console.error("Error creating user:", error);
+          return false;
+        }
+      }
+
+      return true;
+    },
   },
 });
