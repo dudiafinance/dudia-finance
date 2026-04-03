@@ -16,10 +16,10 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## CHECKPOINT ATUAL
 
-**Fase:** ETAPA 5 — Configuração do Projeto
-**Etapa:** Neon Branches
-**Status:** PENDENTE
-**Último passo concluído:** Agentes e Skills criados
+**Fase:** FASE 1 — Projeto Inicializado ✅
+**Etapa:** FASE 2 — Autenticação e API Routes
+**Status:** EM ANDAMENTO
+**Último passo concluído:** Schema, migrations, autenticação e API routes básicas criadas
 
 ---
 
@@ -286,14 +286,13 @@ Leia o arquivo PROGRESSO.md na pasta dudia_finance. Quero continuar a configura�
 
 ## PRÓXIMA AÇÃO
 
-**Ação:** Criar branches no Neon (PostgreSQL)
+**Ação:** Implementar páginas de autenticação
 **Passos:**
-1. Acessar neon.tech
-2. Abrir projeto dudia-finance
-3. Ir em "Branches"
-4. Criar branch `main` (produção)
-5. Criar branch `dev` (desenvolvimento)
-**Após concluir:** Sistema pronto para desenvolvimento!
+1. Criar página de login com provedores OAuth
+2. Criar página de registro
+3. Testar fluxo de autenticação
+4. Implementar proteção de rotas
+**Após concluir:** Ir para Fase 4 (Dashboard)
 
 ---
 
