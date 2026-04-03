@@ -3,6 +3,7 @@ import { hash } from "bcryptjs";
 import { db } from "@/lib/db";
 import { users } from "@/lib/auth/schema";
 import { eq } from "drizzle-orm";
+import { sendWelcomeEmail } from "@/lib/email";
 
 export async function POST(request: NextRequest) {
   try {
@@ -43,6 +44,11 @@ export async function POST(request: NextRequest) {
       emailVerified: null,
       image: null,
     }).returning();
+
+    // Enviar email de boas-vindas (não bloqueia o registro se falhar)
+    sendWelcomeEmail(email, name).catch((error) => {
+      console.error("Failed to send welcome email:", error);
+    });
 
     return NextResponse.json({
       message: "Conta criada com sucesso",
